@@ -58,46 +58,6 @@ We clone the repository from github [https://github.com/Erik172/Z0172CK-Tools](h
 $ git clone https://github.com/Erick172/Z0172CK-Tools
 ```
 
-### Instalando en Kali Linux
-
-Primero debemos tener python3 y pip3
-
-```bash
-$ sudo apt install python3 python3-pip 
-```
-
-{% hint style="info" %}
-Z0172CK Tools solo funciona con python3
-{% endhint %}
-
-Clonamos el repositorio de github [https://github.com/Erik172/Z0172CK-Tools](https://github.com/Erik172/Z0172CK-Tools)
-
-```bash
-$ git clone https://github.com/Erik172/Z0172CK-Tools
-$ cd Z0172CK-Tools
-```
-
-una vez en la carpeta del repositorio descargado instalamos las dependencias en contradas en el archivo requirements.txt
-
-```bash
-$ sudo pip3 install -r requirements.txt
-```
-
-#### Dependencias
-
-* Colorama = 0.4.3
-* Shodan = 1.23.0
-* IpInfo = 3.0.0
-
-### Instalando en Termux
-
-Primero debes descargar python3 y pip3
-
-```bash
-$ pkg install python3
-$ pkg install python3-pip
-```
-
 ## How to use
 
 already installed the dependencies we can execute the file index.py
