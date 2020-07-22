@@ -77,8 +77,8 @@ $ python3 index.py
             V1.0  Basic                                 By -Erick172  
                                                                       
                                                                       
-[01] Shodan                                                           
-[02] Metasploit                                                       
+[01] Shodan        [06] Scan                                                           
+[02] Metasploit    [07] Search Enginare                                                   
 [03] IP Info
 [04] Brute Force    
                                                       
@@ -199,7 +199,7 @@ in the metasploit option, it opens another menu
  Z0172CK (Metasploit) > 
 ```
 
-#### MSF
+#### Listen Payload
 
 {% hint style="warning" %}
 The MSF option is to connect to Metasploit Not to generate a Payload, nor an automatic attack
@@ -252,4 +252,81 @@ Then we will connect to the metasploit Framework
 {% hint style="info" %}
 Not all the Metasploit payloads are there.
 {% endhint %}
+
+```bash
+    
+                   _______________________________________________________
+                  |                                                      |
+             /    |                                                      |
+            /---, |           P   A  Y  L  O  A  D                       |
+       -----# ==| |                     G  E  N  E  R  A  T  E           |
+       | :) # ==| |                                                      |
+  -----'----#   | |______________________________________________________|
+  |)___()  '#   |______====____   \___________________________________|
+ [_/,-,"--"------ //,-,  ,-,\|\   |/             //,-,  ,-,  ,-,\  __#Erik172#
+   ( 0 )|===******||( 0 )( 0 )||-  o              '( 0 )( 0 )( 0 )||
+----'-'--------------'-'--'-'-----------------------'-'--'-'--'-'--------------
+  
+
+Selecione la Plataforma
+[01] Windows
+[02] Android
+```
+
+We select the payload platform
+
+```bash
+Z0172CK (Metasploit/PayloadGenerate) > 1     
+```
+
+```bash
+[01] windows/meterpreter/reverse_http                                                                                                                                
+[02] windows/meterpreter/reverse_https                                                                                                                               
+[03] windows/meterpreter/reverse_tcp                                                                                                                                 
+[04] windows/meterpreter/bind_tcp                                                                                                                                    
+[05] windows/shell/bind_tcp                                                                                                                                          
+[06] windows/shell/reverse_tcp        
+
+Z0172CK (Metasploit/MSF) Payload > 
+```
+
+We select the payload
+
+```bash
+Z0172CK (Metasploit/PayloadGenerate) Payload > 3        
+```
+
+Then it won't ask for a local ip and a port
+
+```bash
+Z0172CK (Metasploit/PayloadGenerate) LHOST > 
+```
+
+```bash
+Z0172CK (Metasploit/PayloadGenerate) LPORT >         
+```
+
+We put the name of our payload, without the file extension
+
+```bash
+Z0172CK (Metasploit/PayloadGenerate) FileName > Payload 
+```
+
+It will show us where the payload generator is stored
+
+```bash
+Achivo Guardado en output/Payload.exe
+```
+
+Then it will ask us if we want to listen to the payload, if we give 's' to be metaplanned to metasploit, and if we give it 'n' it will return us to the main menu
+
+```bash
+desea conectarse a Metasploit [y/N] >  
+```
+
+### IpInfo
+
+With IPinfo, you can pinpoint your users’ locations, customize their experiences, prevent fraud, ensure compliance, and so much more.
+
+
 
