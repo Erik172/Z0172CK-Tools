@@ -45,7 +45,7 @@ $ sudo pip3 install -r requirements.txt
 ### Install on Termux
 
 ```bash
-$ pkg install python3 python3-pip
+$ pkg install python3 python3-pip nmap 
 ```
 
 {% hint style="warning" %}
@@ -56,6 +56,10 @@ We clone the repository from github [https://github.com/Erik172/Z0172CK-Tools](h
 
 ```bash
 $ git clone https://github.com/Erick172/Z0172CK-Tools
+```
+
+```bash
+$ pip3 install -r requirements.txt
 ```
 
 ## How to use
@@ -77,8 +81,8 @@ $ python3 index.py
             V1.0  Basic                                 By -Erick172  
                                                                       
                                                                       
-[01] Shodan                                                           
-[02] Metasploit                                                       
+[01] Shodan        [06] Scan                                                           
+[02] Metasploit    [07] Search Enginare                                                   
 [03] IP Info
 [04] Brute Force    
                                                       
@@ -184,22 +188,22 @@ as we can see in the first line it tells us how many results it found in this ca
 
 the results are saved in the result folder
 
-in the case of shodan it would be /result/Shodan.txt
+in the case of shodan it would be /result/Shodan.json
 
 ### Metasploit
 
 in the metasploit option, it opens another menu
 
 ```bash
-[01] MSF
+[01] Listen Payload
 [02] Payload Generate
-[03] automatic attack
+
 [99] Back
 
  Z0172CK (Metasploit) > 
 ```
 
-#### MSF
+#### Listen Payload
 
 {% hint style="warning" %}
 The MSF option is to connect to Metasploit Not to generate a Payload, nor an automatic attack
@@ -252,4 +256,138 @@ Then we will connect to the metasploit Framework
 {% hint style="info" %}
 Not all the Metasploit payloads are there.
 {% endhint %}
+
+```bash
+    
+                   _______________________________________________________
+                  |                                                      |
+             /    |                                                      |
+            /---, |           P   A  Y  L  O  A  D                       |
+       -----# ==| |                     G  E  N  E  R  A  T  E           |
+       | :) # ==| |                                                      |
+  -----'----#   | |______________________________________________________|
+  |)___()  '#   |______====____   \___________________________________|
+ [_/,-,"--"------ //,-,  ,-,\|\   |/             //,-,  ,-,  ,-,\  __#Erik172#
+   ( 0 )|===******||( 0 )( 0 )||-  o              '( 0 )( 0 )( 0 )||
+----'-'--------------'-'--'-'-----------------------'-'--'-'--'-'--------------
+  
+
+Selecione la Plataforma
+[01] Windows
+[02] Android
+```
+
+We select the payload platform
+
+```bash
+Z0172CK (Metasploit/PayloadGenerate) > 1     
+```
+
+```bash
+[01] windows/meterpreter/reverse_http                                                                                                                                
+[02] windows/meterpreter/reverse_https                                                                                                                               
+[03] windows/meterpreter/reverse_tcp                                                                                                                                 
+[04] windows/meterpreter/bind_tcp                                                                                                                                    
+[05] windows/shell/bind_tcp                                                                                                                                          
+[06] windows/shell/reverse_tcp        
+
+Z0172CK (Metasploit/MSF) Payload > 
+```
+
+We select the payload
+
+```bash
+Z0172CK (Metasploit/PayloadGenerate) Payload > 3        
+```
+
+Then it won't ask for a local ip and a port
+
+```bash
+Z0172CK (Metasploit/PayloadGenerate) LHOST > 
+```
+
+```bash
+Z0172CK (Metasploit/PayloadGenerate) LPORT >         
+```
+
+We put the name of our payload, without the file extension
+
+```bash
+Z0172CK (Metasploit/PayloadGenerate) FileName > Payload 
+```
+
+It will show us where the payload generator is stored
+
+```bash
+File saved in output/Payload.exe
+```
+
+Then it will ask us if we want to listen to the payload, if we give 's' to be metaplanned to metasploit, and if we give it 'n' it will return us to the main menu
+
+```bash
+desea conectarse a Metasploit [y/N] >  
+```
+
+### IpInfo
+
+With IPinfo, you can pinpoint your users’ locations, customize their experiences, prevent fraud, ensure compliance, and so much more.
+
+{% hint style="info" %}
+To be able to use the ipinfo tool you need an API KEY
+{% endhint %}
+
+In order to get the api key we need to create an account on the ipinfo website [https://ipinfo.io/signup](https://ipinfo.io/signup)
+
+Once the account is created we can go [https://ipinfo.io/account](https://ipinfo.io/account) to see our token
+
+```bash
+Ingresa a https://ipinfo.io/account para ver tu access token                                                                                                                                                                                                                                                                         
+Ingresa tu API o Access Token >
+```
+
+we enter our api key or token
+
+```bash
+
+    . _  .    .__  .  .  __,--'
+      (_)    '/__\ __,--'
+    '  .  ' . | o|'     IpInfo
+             [IIII]`--.__
+              |  |       `--.__
+              | :|             `--.__
+              |  |                   `--.__
+    ._,,.-,.__.'__`.___.,.,.-..,_.,.,.,-._..`--..-.,._.,,._,-,.Erik172
+    
+
+Z0172CK (IP-Info) IP > 
+```
+
+We enter the ip that we want to search for information
+
+```bash
+Z0172CK (IP-Info) IP > 185.199.108.153
+```
+
+```bash
+[+] IP = 185.199.108.153
+[+] City = San Francisco
+[+] Country = US
+[+] Country Name = United States
+[!] Hostname = None
+[+] Coordinates = 37.7621,-122.3971
+[+] Latitude = 37.7621
+[+] Longitude = -122.3971
+[+] Organization = AS54113 Fastly
+[+] Code Postal = 94107
+[+] Region = California
+[+] TimeZone = America/Los_Angeles
+
+Results Saved in result/IpInfo.json 
+```
+
+the results are saved in the result folder in the file IpInfo.json
+
+```bash
+Results Saved in result/IpInfo.json 
+```
 
