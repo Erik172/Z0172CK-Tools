@@ -1,5 +1,4 @@
 from colorama import Fore, init
-from pyngrok import ngrok
 import modules.PayloadGenerate as PayloadGenerate
 import modules.camHackers as camHackers
 import subprocess
