@@ -45,7 +45,7 @@ $ sudo pip3 install -r requirements.txt
 ### Install on Termux
 
 ```bash
-$ pkg install python3 python3-pip
+$ pkg install python3 python3-pip nmap 
 ```
 
 {% hint style="warning" %}
@@ -56,6 +56,10 @@ We clone the repository from github [https://github.com/Erik172/Z0172CK-Tools](h
 
 ```bash
 $ git clone https://github.com/Erick172/Z0172CK-Tools
+```
+
+```bash
+$ pip3 install -r requirements.txt
 ```
 
 ## How to use
@@ -184,16 +188,16 @@ as we can see in the first line it tells us how many results it found in this ca
 
 the results are saved in the result folder
 
-in the case of shodan it would be /result/Shodan.txt
+in the case of shodan it would be /result/Shodan.json
 
 ### Metasploit
 
 in the metasploit option, it opens another menu
 
 ```bash
-[01] MSF
+[01] Listen Payload
 [02] Payload Generate
-[03] automatic attack
+
 [99] Back
 
  Z0172CK (Metasploit) > 
@@ -315,7 +319,7 @@ Z0172CK (Metasploit/PayloadGenerate) FileName > Payload
 It will show us where the payload generator is stored
 
 ```bash
-Achivo Guardado en output/Payload.exe
+File saved in output/Payload.exe
 ```
 
 Then it will ask us if we want to listen to the payload, if we give 's' to be metaplanned to metasploit, and if we give it 'n' it will return us to the main menu
@@ -328,5 +332,62 @@ desea conectarse a Metasploit [y/N] >
 
 With IPinfo, you can pinpoint your users’ locations, customize their experiences, prevent fraud, ensure compliance, and so much more.
 
+{% hint style="info" %}
+To be able to use the ipinfo tool you need an API KEY
+{% endhint %}
 
+In order to get the api key we need to create an account on the ipinfo website [https://ipinfo.io/signup](https://ipinfo.io/signup)
+
+Once the account is created we can go [https://ipinfo.io/account](https://ipinfo.io/account) to see our token
+
+```bash
+Ingresa a https://ipinfo.io/account para ver tu access token                                                                                                                                                                                                                                                                         
+Ingresa tu API o Access Token >
+```
+
+we enter our api key or token
+
+```bash
+
+    . _  .    .__  .  .  __,--'
+      (_)    '/__\ __,--'
+    '  .  ' . | o|'     IpInfo
+             [IIII]`--.__
+              |  |       `--.__
+              | :|             `--.__
+              |  |                   `--.__
+    ._,,.-,.__.'__`.___.,.,.-..,_.,.,.,-._..`--..-.,._.,,._,-,.Erik172
+    
+
+Z0172CK (IP-Info) IP > 
+```
+
+We enter the ip that we want to search for information
+
+```bash
+Z0172CK (IP-Info) IP > 185.199.108.153
+```
+
+```bash
+[+] IP = 185.199.108.153
+[+] City = San Francisco
+[+] Country = US
+[+] Country Name = United States
+[!] Hostname = None
+[+] Coordinates = 37.7621,-122.3971
+[+] Latitude = 37.7621
+[+] Longitude = -122.3971
+[+] Organization = AS54113 Fastly
+[+] Code Postal = 94107
+[+] Region = California
+[+] TimeZone = America/Los_Angeles
+
+Results Saved in result/IpInfo.json 
+```
+
+the results are saved in the result folder in the file IpInfo.json
+
+```bash
+Results Saved in result/IpInfo.json 
+```
 
