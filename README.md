@@ -33,6 +33,10 @@ $ git clone https://github.com/Erick172/Z0172CK-Tools
 Install the dependencies found in the requirements.txt file
 
 ```bash
+$ bash ./install.sh 
+```
+
+```bash
 $ sudo pip3 install -r requirements.txt
 ```
 
