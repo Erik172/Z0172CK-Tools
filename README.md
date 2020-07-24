@@ -194,6 +194,8 @@ the results are saved in the result folder
 
 in the case of shodan it would be /result/Shodan.json
 
+[![asciicast](https://asciinema.org/a/349306.svg)](https://asciinema.org/a/349306)
+
 ### Metasploit
 
 in the metasploit option, it opens another menu
