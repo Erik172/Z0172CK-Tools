@@ -396,6 +396,7 @@ the results are saved in the result folder in the file IpInfo.json
 ```bash
 Results Saved in result/IpInfo.json 
 ```
+[![asciicast](https://asciinema.org/a/349309.svg)](https://asciinema.org/a/349309)
 
 ### Brute Force 
 
