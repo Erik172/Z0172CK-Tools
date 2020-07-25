@@ -5,6 +5,4 @@ vt_py==0.5.4
 ipinfo==3.0.0
 requests
 argparse
-google
-bs4
-termcolor
+
