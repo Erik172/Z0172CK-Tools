@@ -1,5 +1,0 @@
-requests
-argparse
-google
-bs4
-termcolor
