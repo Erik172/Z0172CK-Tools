@@ -67,7 +67,7 @@ $ git clone https://github.com/Erick172/Z0172CK-Tools
 ```
 
 ```bash
-$ pip3 install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 ## How to use
