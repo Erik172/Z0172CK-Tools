@@ -16,7 +16,7 @@ Z0172CK Tools can receive Updates
 
 We must first have Python3 and PIP3
 
-```
+```text
 $ sudo apt install python3 python3-pip
 ```
 
@@ -33,7 +33,7 @@ $ git clone https://github.com/Erick172/Z0172CK-Tools
 Install the dependencies found in the requirements.txt file
 
 ```bash
-$ bash ./install.sh 
+$ bash ./install.sh
 ```
 
 ```bash
@@ -49,7 +49,11 @@ $ sudo pip3 install -r requirements.txt
 ### Install on Termux
 
 ```bash
-$ pkg install python3 python3-pip nmap 
+$ pkg update
+```
+
+```bash
+$ pkg install python nmap
 ```
 
 {% hint style="warning" %}
@@ -63,7 +67,7 @@ $ git clone https://github.com/Erick172/Z0172CK-Tools
 ```
 
 ```bash
-$ pip3 install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 ## How to use
@@ -75,7 +79,6 @@ $ python3 index.py
 ```
 
 ```bash
-
     ███████╗ ██████╗  ██╗███████╗██████╗  ██████╗██╗  ██╗             
     ╚══███╔╝██╔═████╗███║╚════██║╚════██╗██╔════╝██║ ██╔╝             
       ███╔╝ ██║██╔██║╚██║    ██╔╝ █████╔╝██║     █████╔╝              
@@ -83,17 +86,17 @@ $ python3 index.py
     ███████╗╚██████╔╝ ██║   ██║  ███████╗╚██████╗██║  ██╗             
     ╚══════╝ ╚═════╝  ╚═╝   ╚═╝  ╚══════╝ ╚═════╝╚═╝  ╚═╝             
             V1.0  Basic                                 By -Erick172  
-                                                                      
-                                                                      
+
+
 [01] Shodan        [06] Scan                                                           
 [02] Metasploit    [07] Search Enginare                                                   
 [03] IP Info
 [04] Brute Force    
-                                                      
+
 [88] Update                                                           
 [99] Exit                                                             
-                                                                      
- Z0172CK >            
+
+ Z0172CK >
 ```
 
 ### Shodan
@@ -125,7 +128,7 @@ Here we can start using the shodan tool
 #### Example
 
 ```bash
-Z0172CK (Shodan) Search > apache2  
+Z0172CK (Shodan) Search > apache2
 ```
 
 then it asks us if we want to see the vulnerabilities too
@@ -140,7 +143,7 @@ then it will give us the result of all the computers connected to the internet t
 
 ```bash
 [!] Resoult found: 10397 
-                                                                                                                                            
+
 [+] IP: 189.109.49.138                                                                                                                                               
 [+] ISP: Vivo                                                                                                                                                        
 [+] Location: {                                                                                                                                                      
@@ -160,7 +163,7 @@ then it will give us the result of all the computers connected to the internet t
 [+] Port: 8089                                                                                                                                                       
 [+] Product: null                                                                                                                                                    
 [+] Version: null                                                                                                                                                    
-                                                                                                                                                                     
+
 [+] IP: 86.107.98.92                                                                                                                                                 
 [+] ISP: Netsons s.r.l.                                                                                                                                              
 [+] Location: {                                                                                                                                                      
@@ -206,7 +209,7 @@ in the metasploit option, it opens another menu
 
 [99] Back
 
- Z0172CK (Metasploit) > 
+ Z0172CK (Metasploit) >
 ```
 
 #### Listen Payload
@@ -250,7 +253,7 @@ We select the Payload to which we want to connect
 
 ```bash
 Z0172CK (Metasploit/MSF) LHOST > 
-Z0172CK (Metasploit/MSF) LPORT > 
+Z0172CK (Metasploit/MSF) LPORT >
 ```
 
 then it will ask us for the port and host \(IP\) of the Payload to connect
@@ -264,7 +267,6 @@ Not all the Metasploit payloads are there.
 {% endhint %}
 
 ```bash
-    
                    _______________________________________________________
                   |                                                      |
              /    |                                                      |
@@ -276,7 +278,7 @@ Not all the Metasploit payloads are there.
  [_/,-,"--"------ //,-,  ,-,\|\   |/             //,-,  ,-,  ,-,\  __#Erik172#
    ( 0 )|===******||( 0 )( 0 )||-  o              '( 0 )( 0 )( 0 )||
 ----'-'--------------'-'--'-'-----------------------'-'--'-'--'-'--------------
-  
+
 
 Selecione la Plataforma
 [01] Windows
@@ -286,7 +288,7 @@ Selecione la Plataforma
 We select the payload platform
 
 ```bash
-Z0172CK (Metasploit/PayloadGenerate) > 1     
+Z0172CK (Metasploit/PayloadGenerate) > 1
 ```
 
 ```bash
@@ -297,29 +299,29 @@ Z0172CK (Metasploit/PayloadGenerate) > 1
 [05] windows/shell/bind_tcp                                                                                                                                          
 [06] windows/shell/reverse_tcp        
 
-Z0172CK (Metasploit/MSF) Payload > 
+Z0172CK (Metasploit/MSF) Payload >
 ```
 
 We select the payload
 
 ```bash
-Z0172CK (Metasploit/PayloadGenerate) Payload > 3        
+Z0172CK (Metasploit/PayloadGenerate) Payload > 3
 ```
 
 Then it won't ask for a local ip and a port
 
 ```bash
-Z0172CK (Metasploit/PayloadGenerate) LHOST > 
+Z0172CK (Metasploit/PayloadGenerate) LHOST >
 ```
 
 ```bash
-Z0172CK (Metasploit/PayloadGenerate) LPORT >         
+Z0172CK (Metasploit/PayloadGenerate) LPORT >
 ```
 
 We put the name of our payload, without the file extension
 
 ```bash
-Z0172CK (Metasploit/PayloadGenerate) FileName > Payload 
+Z0172CK (Metasploit/PayloadGenerate) FileName > Payload
 ```
 
 It will show us where the payload generator is stored
@@ -331,7 +333,7 @@ File saved in output/Payload.exe
 Then it will ask us if we want to listen to the payload, if we give 's' to be metaplanned to metasploit, and if we give it 'n' it will return us to the main menu
 
 ```bash
-desea conectarse a Metasploit [y/N] >  
+desea conectarse a Metasploit [y/N] >
 ```
 
 ### IpInfo
@@ -354,7 +356,6 @@ Ingresa tu API o Access Token >
 we enter our api key or token
 
 ```bash
-
     . _  .    .__  .  .  __,--'
       (_)    '/__\ __,--'
     '  .  ' . | o|'     IpInfo
@@ -363,9 +364,9 @@ we enter our api key or token
               | :|             `--.__
               |  |                   `--.__
     ._,,.-,.__.'__`.___.,.,.-..,_.,.,.,-._..`--..-.,._.,,._,-,.Erik172
-    
 
-Z0172CK (IP-Info) IP > 
+
+Z0172CK (IP-Info) IP >
 ```
 
 We enter the ip that we want to search for information
@@ -388,22 +389,22 @@ Z0172CK (IP-Info) IP > 185.199.108.153
 [+] Region = California
 [+] TimeZone = America/Los_Angeles
 
-Results Saved in result/IpInfo.json 
+Results Saved in result/IpInfo.json
 ```
 
 the results are saved in the result folder in the file IpInfo.json
 
 ```bash
-Results Saved in result/IpInfo.json 
+Results Saved in result/IpInfo.json
 ```
+
 [![asciicast](https://asciinema.org/a/349309.svg)](https://asciinema.org/a/349309)
 
-### Brute Force 
+### Brute Force
 
 with the brute force option we can attack sites and protocols using passwords
 
 ```bash
-
                                                          c=====e
                                                             H
    ____________                                         _,,_H__
@@ -411,13 +412,13 @@ with the brute force option we can attack sites and protocols using passwords
  (__((__((___()()_____________________________________// |ERIK |
 (__((__((___()()()------------------------------------'  |_____|
       Brute Force V0.1
-  
+
 
 [01] Facebook
 
 [99] Back
 
- Z0172CK (BruteForce) > 
+ Z0172CK (BruteForce) >
 ```
 
 #### Facebook
@@ -434,7 +435,7 @@ Z0172CK (BruteForce) > 1
 
 [99] Back
 
- Z0172CK (BruteForce/Facebook) > 
+ Z0172CK (BruteForce/Facebook) >
 ```
 
 in the facebook part we have two options 1. start a new attack 2. continue with an attack
@@ -483,7 +484,7 @@ Trying pass (17/39331): "michelle"
 Trying pass (18/39331): "11111111"
 Trying pass (19/39331): "princess"
 Trying pass (20/39331): "987654321"
-[*] Waiting 1 hour, to return at: 
+[*] Waiting 1 hour, to return at:
 ```
 
 all 20 passwords have been completed and we have to wait for one or we can give it Ctrl + c to save the attack and use it again in an hour
@@ -521,7 +522,7 @@ Z0172CK (BruteForce/Facebook) > 2
 Z0172CK (BruteForce/Facebook) > 2
 Files sessions:
 1 : modules/FB-BruteForce/sessions/store.session.correo@correo.com.2020-07-23T1133 (wl: modules/FB-BruteForce/passwords.lst, lastpass: 987654321 )
-Choose a session number: 
+Choose a session number:
 ```
 
 we give enter and we can continue with our attack
