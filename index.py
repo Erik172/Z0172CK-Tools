@@ -185,8 +185,8 @@ def main():
     print("")
     print("[{}01{}] Shodan          [{}06{}] Scan".format(color, Fore.LIGHTWHITE_EX, color, Fore.LIGHTWHITE_EX))
     print("[{}02{}] Metasploit      [{}07{}] Search Engines".format(color, Fore.LIGHTWHITE_EX, color, Fore.LIGHTWHITE_EX))
-    print("[{}03{}] IP Info".format(color, Fore.LIGHTWHITE_EX))
-    print("[{}04{}] Brute Force".format(color, Fore.LIGHTWHITE_EX))
+    print("[{}03{}] IP Info         [{}08{}] Spy And Keylogger".format(color, Fore.LIGHTWHITE_EX, color, Fore.LIGHTWHITE_EX))
+    print("[{}04{}] Brute Force     [{}09{}] Phishing".format(color, Fore.LIGHTWHITE_EX, color, Fore.LIGHTWHITE_EX))
     print("[{}05{}] Exploits".format(color, Fore.LIGHTWHITE_EX))
     print("")
     print("[{}88{}] Update".format(color, Fore.LIGHTWHITE_EX))
@@ -217,6 +217,9 @@ def main():
 
     elif options == '07' or options == '7':
         mainSearchEngines()
+
+    elif options == '08' or options == '8':
+        mainSpy()
 
     elif options == '88' or options == 'update':
         Update()
@@ -392,10 +395,12 @@ def mainExploits():
         
         print("")
         print("Recuerde ir a {}127.0.0.1:1337{} para ver la pagina Phishing".format(Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX))
-        os.system("firefox 127.0.0.1:1337 &")
+        #os.system("firefox 127.0.0.1:1337 &")
         print("")
-        time.sleep(2)
+        time.sleep(1)
+        #os.system("xterm -hold -e firefox z0172ck.me")
         os.system("cd modules/QRLJacker/ && python3 QrlJacker.py -q -r .ataque")
+
         mainExploits()
 
     elif option == '99':
@@ -479,9 +484,32 @@ def mainSearchEngines():
         print("[{}!] Option not available error{}".format(Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX))
         mainScan()
 
+def mainSpy():
+    global ProgramName, color
+
+    print("")
+    print("[{}01{}] sAINT ({}java{})".format(color, Fore.LIGHTWHITE_EX, Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
+    #print("[{}02{}] SpyZ ({}Python{})".format(color, Fore.LIGHTWHITE_EX, Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
+    print("")
+    print("[{}99{}] Back".format(color, Fore.LIGHTWHITE_EX))
+    print("")
+
+    options = input(str(" {} ({}Spy{}) > ".format(ProgramName, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX)))
+
+    if options == '1' or options == '01':
+        print("")
+        if os.path.exists('modules/sAINT') == False:
+            os.system("cd modules/ && git clone https://github.com/tiagorlampert/sAINT && cd sAINT && chmod +x configure.sh && sudo ./configure.sh ")
+        
+        os.system("cd modules/sAINT && sudo java -jar sAINT.jar")
+        mainSpy()
+
+    elif options == '99':
+        main()
+
 def Update():
     print("[{}+{}] updating".format(Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
-    os.system("sudo git pull")
+    os.system("sudo git pull origin master")
     os.system("bash ./install.sh")
     os.system("sudo pip3 install -r requirements.txt")
     main()
@@ -518,7 +546,7 @@ def banner():
      ███╔╝  ████╔╝██║ ██║   ██╔╝ ██╔═══╝ ██║     ██╔═██╗ 
     ███████╗╚██████╔╝ ██║   ██║  ███████╗╚██████╗██║  ██╗
     ╚══════╝ ╚═════╝  ╚═╝   ╚═╝  ╚══════╝ ╚═════╝╚═╝  ╚═╝
-            V1.0  Basic                                 By -Erick172
+            Version Beta V 1.0                      By -Erik172 
     {}'''.format(color, Fore.LIGHTWHITE_EX)
 
     print(banner)
