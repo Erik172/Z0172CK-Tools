@@ -221,6 +221,9 @@ def main():
     elif options == '08' or options == '8':
         mainSpy()
 
+    elif options == '09' or options == '9':
+        mainPhishing()
+
     elif options == '88' or options == 'update':
         Update()
     
@@ -371,6 +374,7 @@ def mainExploits():
     print("[{}01{}] Cam Hack".format(color, Fore.LIGHTWHITE_EX))
     print("[{}02{}] SET".format(color, Fore.LIGHTWHITE_EX))
     print("[{}03{}] QrJacker ({}WhatssApp{})".format(color, Fore.LIGHTWHITE_EX, Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
+    #print("[{}04{}] APK Injector".format(color, Fore.LIGHTWHITE_EX))
     print("")
     print("[{}99{}] Back".format(color, Fore.LIGHTWHITE_EX))
     print("")
@@ -403,6 +407,8 @@ def mainExploits():
 
         mainExploits()
 
+    elif option == '04' or option == '4':
+        pass
     elif option == '99':
         banner()
         main()
@@ -510,6 +516,24 @@ def mainSpy():
 
     elif options == '99':
         main()
+
+def mainPhishing():
+    print("")
+    print("[{}01{}] SocialFish")
+    print("")
+    print("[{}99{}] Back")
+
+    options = input(str(" {} ({}Phishing{}) > "))
+
+    if options == '01' or options == '1':
+        if os.path.exists("modules/SocialFish/") == False:
+            os.system("cd modules/ && git clone https://github.com/UndeadSec/SocialFish")
+            print("Ok")
+
+            print("")
+            
+    
+    print()
 
 def Update():
     print("[{}+{}] updating".format(Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
