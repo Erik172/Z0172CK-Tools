@@ -299,6 +299,10 @@ def mainMetasploit():
         banner()
         main()
 
+    else:
+        print("{}[!] Option not available{}".format(Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX))
+        mainMetasploit()
+
 def mainIPInfo():
     global ProgramName, color
     f = open('APIs/IpInfo.txt', 'r')
@@ -366,6 +370,10 @@ def mainBruteForece():
     elif option == '99': 
         banner()
         main()
+    
+    else:
+        print("{}[!] Option not available{}".format(Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX))
+        mainBruteForece()
 
 def mainExploits():
     global ProgramName, color
@@ -412,6 +420,10 @@ def mainExploits():
     elif option == '99':
         banner()
         main()
+    
+    else:
+        print("{}[!] Option not available{}".format(Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX))
+        mainExploits()
 
 def mainScan():
     global ProgramName, color
@@ -453,7 +465,7 @@ def mainScan():
         main()
 
     else:
-        print("[{}!] Option not available error{}".format(Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX))
+        print("{}[!] Option not available error{}".format(Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX))
         mainScan()
 
 def NmapScan():
@@ -516,6 +528,10 @@ def mainSpy():
 
     elif options == '99':
         main()
+
+    else:
+        print("{}[!] Option not available{}".format(Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX))
+        mainSpy()
 
 def mainPhishing():
     print("")
