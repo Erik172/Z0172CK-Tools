@@ -572,6 +572,7 @@ def Update():
     os.system("sudo git pull origin master")
     os.system("bash ./install.sh")
     os.system("sudo pip3 install -r requirements.txt")
+    print("\nWelcome a new {}Version 1.2{}".format(Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
     main()
 
 def Configurate():
