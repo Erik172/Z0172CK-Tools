@@ -6,6 +6,8 @@ description: Version Basic
 
 Documentation [https://app.gitbook.com/@erik172/s/z0172ck-tools](https://app.gitbook.com/@erik172/s/z0172ck-tools)
 
+site web [https://z0172ck.me](https://z0172ck.me)
+
 {% hint style="info" %}
 Z0172CK Tools can receive Updates
 {% endhint %}
@@ -552,4 +554,8 @@ Trying pass (35/39331): midnight
 Trying pass (36/39331): bigdaddy
 Trying pass (37/39331): victoria
 ```
+
+### Exploits
+
+In this part we find different scripts that can be exploited
 
