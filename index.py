@@ -1,6 +1,7 @@
 from colorama import Fore, init
 import modules.PayloadGenerate as PayloadGenerate
 import modules.camHackers as camHackers
+import modules.UrlHider as UrlHider
 import subprocess
 import banners
 import ipinfo
@@ -17,6 +18,7 @@ colors = [Fore.LIGHTBLUE_EX, Fore.LIGHTCYAN_EX, Fore.LIGHTGREEN_EX, Fore.LIGHTMA
 color = random.choice(colors)
 
 ProgramName = 'Z0172CK'
+Version = 'V1.2'
 
 PrintBanners = True
 
@@ -535,21 +537,35 @@ def mainSpy():
 
 def mainPhishing():
     print("")
-    print("[{}01{}] SocialFish")
+    print("[{}01{}] SocialFish".format(color, Fore.LIGHTWHITE_EX))
+    print("[{}02{}] Hide custom URL for social engineering".format(color, Fore.LIGHTWHITE_EX))
     print("")
-    print("[{}99{}] Back")
+    print("[{}99{}] Back".format(color, Fore.LIGHTWHITE_EX))
+    print()
 
-    options = input(str(" {} ({}Phishing{}) > "))
+    options = input(str(" {} ({}Phishing{}) > ".format(ProgramName, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX)))
 
     if options == '01' or options == '1':
         if os.path.exists("modules/SocialFish/") == False:
             os.system("cd modules/ && git clone https://github.com/UndeadSec/SocialFish")
             print("Ok")
 
-            print("")
-            
-    
-    print()
+        print("")
+        try:
+            os.system("cd modules/SocialFish/ && sudo python3 SocialFish.py admin admin && echo Ok")
+        except KeyboardInterrupt:
+            mainPhishing()
+
+    elif options == '02' or options == '2':
+        UrlHider.main()
+
+    elif options == '99':
+        banner()
+        main()
+
+    else:
+        print("{}[!] Option not avalible{}".format(Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX))
+        mainPhishing()
 
 def Update():
     print("[{}+{}] updating".format(Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
@@ -579,7 +595,7 @@ def Configurate():
         main()
 
     Configurate
-
+    
 def banner():
     global color
 
@@ -590,7 +606,7 @@ def banner():
      ███╔╝  ████╔╝██║ ██║   ██╔╝ ██╔═══╝ ██║     ██╔═██╗ 
     ███████╗╚██████╔╝ ██║   ██║  ███████╗╚██████╗██║  ██╗
     ╚══════╝ ╚═════╝  ╚═╝   ╚═╝  ╚══════╝ ╚═════╝╚═╝  ╚═╝
-            Version Beta V 1.0                      By -Erik172 
+            Version V 1.2                      By -Erik172 
     {}'''.format(color, Fore.LIGHTWHITE_EX)
 
     print(banner)

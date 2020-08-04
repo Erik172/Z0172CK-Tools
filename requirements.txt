@@ -15,3 +15,4 @@ Flask==1.0.2
 Flask_Login==0.4.1
 nmap==0.0.1
 python-secrets
+pyshorteners

