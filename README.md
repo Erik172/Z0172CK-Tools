@@ -16,6 +16,8 @@ Z0172CK Tools can receive Updates
 
 ### Install on Kali Linux
 
+[![asciicast](https://asciinema.org/a/352244.svg)](https://asciinema.org/a/352244)
+
 We must first have Python3 and PIP3
 
 ```text
