@@ -1,5 +1,5 @@
 echo "Solucionando Problemas"
-
+sudo rm geckodriver
 sudo rm /usr/local/share/geckodriver
 sudo rm /usr/local/bin/geckodriver
 sudo rm /usr/bin/geckodriver
