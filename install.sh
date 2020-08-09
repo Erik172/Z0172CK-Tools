@@ -1,3 +1,9 @@
+echo "Solucionando Problemas"
+
+sudo rm /usr/local/share/geckodriver
+sudo rm /usr/local/bin/geckodriver
+sudo rm /usr/bin/geckodriver
+
 echo -e "[ \e[32m + \e[0m ] Instalando Aplicaciones"
 echo ""
 sudo apt install python3 -y&&
