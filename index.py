@@ -2,8 +2,8 @@ from colorama import Fore, init
 import modules.PayloadGenerate as PayloadGenerate
 import modules.camHackers as camHackers
 import modules.UrlHider as UrlHider
+import modules.banners
 import subprocess
-import banners
 import ipinfo
 import shodan
 import random
@@ -384,7 +384,7 @@ def mainExploits():
     print("[{}01{}] Cam Hack".format(color, Fore.LIGHTWHITE_EX))
     print("[{}02{}] SET".format(color, Fore.LIGHTWHITE_EX))
     print("[{}03{}] QrJacker ({}WhatssApp{})".format(color, Fore.LIGHTWHITE_EX, Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
-    #print("[{}04{}] APK Injector".format(color, Fore.LIGHTWHITE_EX))
+    print("[{}04{}] AndroidSploit".format(color, Fore.LIGHTWHITE_EX))
     print("")
     print("[{}99{}] Back".format(color, Fore.LIGHTWHITE_EX))
     print("")
@@ -419,6 +419,7 @@ def mainExploits():
 
     elif option == '04' or option == '4':
         pass
+
     elif option == '99':
         banner()
         main()
@@ -612,9 +613,15 @@ def banner():
     print(banner)
 
 if __name__ == "__main__":
-    try:
-        banner()
-        main()
-    except KeyboardInterrupt:
-        banners.println(0)
+    if sys.platform == 'linux':
+        try:
+            banner()
+            main()
+        except KeyboardInterrupt:
+            banners.println(0)
+            sys.exit()
+
+    else:
+        print(sys.platform)
+        print("[{}!{}] Platform not avalible to a".format(Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX))
         sys.exit()
