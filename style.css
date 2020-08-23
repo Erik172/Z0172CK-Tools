@@ -19,7 +19,8 @@ body {
     width: 100%;
     font-family: Hacked;
     margin: 0;
-    background-image: url(images/background.jpg);
+    /* background-image: url(images/background.jpg); */
+    background-image: url(https://i.imgur.com/RNmZ6Ii.jpg);
     background-size: 100%;
     background-attachment: fixed;
     opacity:0.97;
@@ -62,9 +63,59 @@ body {
 }
 
 .container {
-    background-color: #495057;
+    /* background-color: #495057; */
     margin: 25px;
     padding: 25px;
+}
+
+.container2 {
+    display: flex;
+}
+
+.container2__image {
+    width: 50%;
+}
+
+.container2__image a img {
+    max-width: 100%;
+}
+
+.container2__info {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.version {
+    font-size: 10px;
+}
+
+.version p {
+    font-size: 16px;
+}
+
+.install {
+    margin-top: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: #23d18b;
+}
+
+.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.commandLine {
+    display: flex;
+}
+
+.commandLine code {
+    background-color: #343a40;
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
 }
 
 .footer {
@@ -82,7 +133,7 @@ body {
 
 @media screen and (max-width: 426px){
     .header {
-        background-image: url(images/background-m.jpg);
+        background-image: url(https://i.imgur.com/PVMYI2W.jpg);
     }
     
     .header__title {
@@ -100,5 +151,23 @@ body {
 
     .container {
         padding: 0;
+    }
+
+    .container2 {
+        flex-direction: column;
+    }
+
+    .container2__image {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .container2__info {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .version p {
+        font-size: 13px;
     }
 }
