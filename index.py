@@ -12,6 +12,8 @@ import json
 import sys
 import os
 
+os.system('clear')
+
 init()
 
 colors = [Fore.LIGHTBLUE_EX, Fore.LIGHTCYAN_EX, Fore.LIGHTGREEN_EX, Fore.LIGHTMAGENTA_EX, Fore.LIGHTRED_EX]
