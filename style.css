@@ -85,6 +85,14 @@ body {
     margin-left: 5%;
 }
 
+.container2__code {
+    width: 50%;
+}
+
+.container2__code code {
+    
+}
+
 .version {
     font-size: 10px;
 }
