@@ -1,6 +1,6 @@
 from colorama import Fore, init
 #import banners
-import modules.banners as banners
+import banners as banners
 import random
 import subprocess, sys, os
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from colorama import Fore, init
-import modules.banners as banners
+import banners as banners
 import requests,re,os
 import time
 import sys
