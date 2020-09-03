@@ -11,7 +11,7 @@
         <h1 class="header__title">Z0172CK Tools</h1>
         <div class="header__menu">
             <a href="#installation">Installation</a>
-            <a href="">Usage</a>
+            <a href="#usage">Usage</a>
         </div>
     </header>
 
@@ -79,16 +79,44 @@
         <h3>Manual installation</h3>
 
         <div class="container2">
+
             <div class="container2__code">
                 <code>
                     sudo apt Install python3 python3-pip nmap hydra tor curl nikto maven default-jdk default-jre openjdk-8-jdk openjdk-8-jre zlib1g-dev libncurses5-dev lib32z1 lib32ncurses6 screen
                 </code>
             </div>
+
+            <div class="container2__info">
+                <p>
+                    In the manual installation we have to install some applications and python libraries, for the installation of the python libraries we will use pip, if you do not have pip installed you can click <strong><a href="https://packaging.python.org/tutorials/installing-packages/" class="link">here</a></strong>
+                </p>
+            </div>
         </div>
+
+        <div class="container2">
+
+            <div class="container2__code">
+                <code>
+                    pip3 install -r requirements.txt
+                </code>
+            </div>
+
+            <div class="container2__info">
+                <p>
+                    with this command we can install all the necessary python libraries
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="usage container" id="usage">
+        <h2>Usage</h2>
+        <div class="usage__Shodan"></div>
     </section>
 
     <footer class="footer">
-        <p>Created by <strong>Erik</stron> <ion-icon name="heart">heart</ion-icon></p>
+        <p>Created by <strong>Erik</strong> <ion-icon name="heart">heart</ion-icon></p>
     </footer>
     
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>

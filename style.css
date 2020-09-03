@@ -87,10 +87,14 @@ body {
 
 .container2__code {
     width: 50%;
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .container2__code code {
-    
+    /* margin-left: 10px; */
 }
 
 .version {
@@ -173,6 +177,10 @@ body {
     .container2__info {
         width: 100%;
         margin-left: 0;
+    }
+
+    .container2__code {
+        width: 92.5%;
     }
 
     .version p {
